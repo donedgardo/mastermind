@@ -5,13 +5,13 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "game-state": "yarn workspace game-state",
     "test": "jest --coverage",
     "lint": "eslint --ext ts,tsx packages",
     "lint-staged": "lint-staged",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
     "start": "lerna run start --parallel",
+    "dev": "lerna run dev --parallel",
     "pretty-quick": "pretty-quick --staged"
   },
   "devDependencies": {
@@ -37,7 +37,6 @@
   },
   "pre-commit": [
     "lint-staged",
-    "pretty-quick",
     "test"
   ],
   "lint-staged": {

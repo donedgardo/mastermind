@@ -1,0 +1,11 @@
+node_modules
+dist
+*.log
+.netlify
+tsconfig.tsbuildinfo
+.vscode
+.serverless
+.dynamodb
+.DS_Store
+.idea
+.env

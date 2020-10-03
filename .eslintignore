@@ -1,0 +1,4 @@
+dist
+node_modules
+packages/andromeda/src/lib/prisma/generated/
+packages/andromeda/src/generated/

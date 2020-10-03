@@ -1,0 +1,55 @@
+{
+  "name": "mastermind",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "game-state": "yarn workspace game-state",
+    "test": "jest",
+    "lint": "eslint --ext ts,tsx packages",
+    "lint-staged": "lint-staged",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch",
+    "start": "lerna run start --parallel",
+    "pretty-quick": "pretty-quick --staged"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-typescript": "^7.10.4",
+    "@types/jest": "^26.0.14",
+    "@typescript-eslint/eslint-plugin": "^4.3.0",
+    "@typescript-eslint/parser": "^4.3.0",
+    "babel-loader": "^8.1.0",
+    "eslint": "^7.10.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "jest": "^26.4.2",
+    "lerna": "^3.22.1",
+    "lint-staged": "^10.4.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.1.2",
+    "pretty-quick": "^3.0.2",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.0.3"
+  },
+  "pre-commit": [
+    "lint-staged",
+    "test"
+  ],
+  "lint-staged": {
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

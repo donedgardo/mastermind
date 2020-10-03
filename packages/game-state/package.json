@@ -1,0 +1,9 @@
+{
+  "name": "@mastermind/game-state",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1601706627541" clover="3.2.0">
+  <project timestamp="1601706627541" name="All files">
+    <metrics statements="33" coveredstatements="33" conditionals="17" coveredconditionals="16" methods="15" coveredmethods="15" elements="65" coveredelements="64" complexity="0" loc="33" ncloc="33" packages="1" files="3" classes="3"/>
+    <file name="Feedback.ts" path="/Users/ecarreras/mastermind/packages/game-state/src/Feedback.ts">
+      <metrics statements="15" coveredstatements="15" conditionals="8" coveredconditionals="8" methods="7" coveredmethods="7"/>
+      <line num="4" count="20" type="stmt"/>
+      <line num="7" count="20" type="stmt"/>
+      <line num="8" count="20" type="stmt"/>
+      <line num="14" count="20" type="stmt"/>
+      <line num="15" count="20" type="stmt"/>
+      <line num="16" count="80" type="cond" truecount="2" falsecount="0"/>
+      <line num="17" count="21" type="stmt"/>
+      <line num="18" count="59" type="cond" truecount="2" falsecount="0"/>
+      <line num="19" count="31" type="stmt"/>
+      <line num="22" count="20" type="stmt"/>
+      <line num="26" count="31" type="stmt"/>
+      <line num="27" count="124" type="cond" truecount="2" falsecount="0"/>
+      <line num="28" count="26" type="stmt"/>
+      <line num="33" count="80" type="stmt"/>
+      <line num="37" count="59" type="cond" truecount="2" falsecount="0"/>
+    </file>
+    <file name="GameState.ts" path="/Users/ecarreras/mastermind/packages/game-state/src/GameState.ts">
+      <metrics statements="16" coveredstatements="16" conditionals="9" coveredconditionals="8" methods="7" coveredmethods="7"/>
+      <line num="7" count="17" type="stmt"/>
+      <line num="8" count="17" type="stmt"/>
+      <line num="11" count="17" type="cond" truecount="2" falsecount="0"/>
+      <line num="12" count="14" type="stmt"/>
+      <line num="13" count="14" type="stmt"/>
+      <line num="14" count="14" type="stmt"/>
+      <line num="18" count="37" type="stmt"/>
+      <line num="19" count="37" type="stmt"/>
+      <line num="23" count="2" type="stmt"/>
+      <line num="27" count="18" type="cond" truecount="2" falsecount="0"/>
+      <line num="31" count="20" type="cond" truecount="1" falsecount="1"/>
+      <line num="32" count="20" type="stmt"/>
+      <line num="33" count="20" type="stmt"/>
+      <line num="34" count="20" type="stmt"/>
+      <line num="35" count="20" type="stmt"/>
+      <line num="39" count="3" type="cond" truecount="2" falsecount="0"/>
+    </file>
+    <file name="Turn.ts" path="/Users/ecarreras/mastermind/packages/game-state/src/Turn.ts">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="6" count="20" type="stmt"/>
+      <line num="7" count="20" type="stmt"/>
+    </file>
+  </project>
+</coverage>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1601712906202" clover="3.2.0">
-  <project timestamp="1601712906202" name="All files">
+<coverage generated="1601741864023" clover="3.2.0">
+  <project timestamp="1601741864023" name="All files">
     <metrics statements="34" coveredstatements="34" conditionals="17" coveredconditionals="16" methods="15" coveredmethods="15" elements="66" coveredelements="65" complexity="0" loc="34" ncloc="34" packages="1" files="3" classes="3"/>
     <file name="Feedback.ts" path="/Users/ecarreras/mastermind/packages/game-state/src/Feedback.ts">
       <metrics statements="15" coveredstatements="15" conditionals="8" coveredconditionals="8" methods="7" coveredmethods="7"/>

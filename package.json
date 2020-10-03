@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "game-state": "yarn workspace game-state",
-    "test": "jest",
+    "test": "jest --coverage",
     "lint": "eslint --ext ts,tsx packages",
     "lint-staged": "lint-staged",
     "test:coverage": "jest --coverage",

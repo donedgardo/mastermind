@@ -1,3 +1,13 @@
 <template>
-  <h1>Hello world!</h1>
+  <div class="container">
+    <GameBoard />
+  </div>
+
 </template>
+
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({})
+</script>
+

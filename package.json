@@ -37,6 +37,7 @@
   },
   "pre-commit": [
     "lint-staged",
+    "pretty-quick",
     "test"
   ],
   "lint-staged": {

@@ -15,7 +15,7 @@ export default class Feedback {
     this.setFeedback();
     return this.feedback.sort().join('');
   }
-t
+
   private giveRedLetter(i: number, letter: string) {
     this.feedback.push('R');
     this.codeLetterCount[letter]--;

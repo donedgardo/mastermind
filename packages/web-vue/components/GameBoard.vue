@@ -30,7 +30,7 @@ export default class GameBoard extends Vue{
       return this.guess0 + this.guess1 + this.guess2 + this.guess3
   }
   private isSubmitDisabled() {
-      return this.game.isOver() || !this.game.isCodeValid(this.getGuessInput)
+      return this.game.isOver() || !this.game.isCodeValid(this.getGuessInput())
   }
   private resetInput() {
       this.guess0 = '';

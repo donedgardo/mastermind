@@ -12,6 +12,9 @@ describe('GameState', () => {
     expect(() => new GameState({ code: '012345' })).toThrow();
     expect(() => new GameState({ code: '012' })).toThrow();
   });
+  it("should return false if code is invalid", () => {
+    expect(game.isCodeValid("12")).toBeFalsy()
+  })
   it('should throw error if code is an invalid character', () => {
     expect(() => new GameState({ code: 'a123' })).toThrow();
   });
@@ -30,6 +33,12 @@ describe('GameState', () => {
     game.guess('1000');
     expect(game.activeTurn).toStrictEqual(2);
   });
+  it('should sort turn correctly', () => {
+    game.guess('1000');
+    game.guess('1001');
+    expect(game.turns[0].guess).toStrictEqual('1000')
+    expect(game.turns[1].guess).toStrictEqual('1001')
+  })
   it('should know what previous guesses where', () => {
     game.guess('1001');
     game.guess('1002');
@@ -46,9 +55,12 @@ describe('GameState', () => {
     expect(game.activeTurn).toStrictEqual(3);
     game = new GameState({ code: '0011' });
     expect(game.guess('1100').feedback).toStrictEqual('WWWW');
+    game = new GameState({ code: '0123' });
+    expect(game.guess('1111').feedback).toStrictEqual('R');
     game = new GameState({ code: '0001' });
     expect(game.guess('1000').feedback).toStrictEqual('RRWW');
-  });
+    game = new GameState({ code: '3331' });
+    expect(game.guess('1333').feedback).toStrictEqual('RRWW');  });
   it('should finish the game after all turns have passed', () => {
     [0, 1, 2, 3, 4, 5, 6, 7].forEach(() => game.guess('0000'));
     expect(game.isOver()).toBeTruthy();

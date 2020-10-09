@@ -12,6 +12,8 @@
     "test:watch": "jest --watch",
     "start": "lerna run start --parallel",
     "dev": "lerna run dev --parallel",
+    "build": "lerna run build --parallel",
+    "start": "lerna run start --parallel",
     "pretty-quick": "pretty-quick --staged"
   },
   "devDependencies": {

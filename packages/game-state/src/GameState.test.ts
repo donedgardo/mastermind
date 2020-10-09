@@ -8,6 +8,11 @@ describe('GameState', () => {
   it('should allow to create a new game', () => {
     expect(game).toBeTruthy();
   });
+  it("should allow to create a game with random code if none is provided", ()=> {
+    const newGame = new GameState()
+    expect(newGame).toBeTruthy()
+  })
+
   it('should throw error if code is not a 4 digit number', () => {
     expect(() => new GameState({ code: '012345' })).toThrow();
     expect(() => new GameState({ code: '012' })).toThrow();
@@ -65,9 +70,18 @@ describe('GameState', () => {
     [0, 1, 2, 3, 4, 5, 6, 7].forEach(() => game.guess('0000'));
     expect(game.isOver()).toBeTruthy();
   });
+  it("allow to see the code after game is over", ()=> {
+    const newGame = new GameState();
+    [0, 1, 2, 3, 4, 5, 6, 7].forEach(() => newGame.guess('0000'));
+    expect(newGame.getCode()).toBeTruthy()
+  })
   it('should not finish the game early', () => {
     game.guess('1111');
     expect(game.isOver()).toBeFalsy();
+  });
+  it('should not allow to read code before game is over', () => {
+    game.guess('1111');
+    expect(game.getCode()).toBeFalsy();
   });
   it('should finish the game after correct guess', () => {
     game.guess('0123');

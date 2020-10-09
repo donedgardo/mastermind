@@ -37,7 +37,7 @@ export default class GameBoard extends Vue{
       this.guess1 = '';
       this.guess2 = '';
       this.guess3 = '';
-    },
+  }
   private submitGuess() {
       this.game.guess(this.getGuessInput())
       this.resetInput();

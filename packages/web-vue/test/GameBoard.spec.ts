@@ -60,10 +60,8 @@ describe('GameBoard', () => {
     expect(lastFeedback).toBeInTheDocument()
   })
   test("button should be disabled if code is not valid", async () => {
-    const { getByTestId } = gameBoard;
     await inputGuess(gameBoard, "012")
     expect(getGuessSubmitButton(gameBoard)).toBeDisabled()
-
   })
 
 })

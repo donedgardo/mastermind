@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1602208723496" clover="3.2.0">
-  <project timestamp="1602208723496" name="All files">
+<coverage generated="1605413399321" clover="3.2.0">
+  <project timestamp="1605413399321" name="All files">
     <metrics statements="68" coveredstatements="67" conditionals="26" coveredconditionals="23" methods="28" coveredmethods="27" elements="122" coveredelements="117" complexity="0" loc="68" ncloc="68" packages="2" files="4" classes="4"/>
     <package name="game-state.src">
       <metrics statements="46" coveredstatements="46" conditionals="21" coveredconditionals="20" methods="23" coveredmethods="23"/>
@@ -14,14 +14,14 @@
         <line num="11" count="528" type="stmt"/>
         <line num="15" count="33" type="stmt"/>
         <line num="16" count="33" type="stmt"/>
-        <line num="20" count="33" type="stmt"/>
-        <line num="21" count="33" type="stmt"/>
+        <line num="20" count="25" type="stmt"/>
+        <line num="21" count="25" type="stmt"/>
         <line num="25" count="172" type="stmt"/>
         <line num="29" count="33" type="stmt"/>
         <line num="30" count="33" type="stmt"/>
         <line num="34" count="33" type="stmt"/>
         <line num="35" count="132" type="cond" truecount="2" falsecount="0"/>
-        <line num="36" count="33" type="stmt"/>
+        <line num="36" count="25" type="stmt"/>
         <line num="42" count="33" type="stmt"/>
         <line num="43" count="132" type="stmt"/>
         <line num="44" count="528" type="stmt"/>

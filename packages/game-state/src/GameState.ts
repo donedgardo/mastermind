@@ -7,16 +7,20 @@ export default class GameState {
   public activeTurn: number = 0;
   public turns: Turn[] = [];
 
-  constructor({ code, maxTurns = 8 }: { code: string; maxTurns?: number }) {
-    if (this.isCodeValid(code)) throw new Error('Invalid code');
+  constructor(args: { code?: string; maxTurns?: number } = {}) {
+    const { code = "", maxTurns = 8} = args
+    if(!code) this.code = [0,0,0,0].map(()=>Math.floor(Math.random() * 6).toString());
+    else {
+      if (!this.isCodeValid(code)) throw new Error('Invalid code')
+      this.code = code.split('');
+    }
     this.turns = new Array(maxTurns);
-    this.code = code.split('');
     this.maxTurns = maxTurns;
   }
 
-  private isCodeValid(code: string) {
+  public isCodeValid(code: string) {
     const regex = RegExp(/^[0-5]{4}$/);
-    return !regex.test(code);
+    return regex.test(code);
   }
 
   private areTurnsOver() {
@@ -30,7 +34,7 @@ export default class GameState {
   }
 
   guess(guess: string): Turn {
-    if (this.isCodeValid(guess)) throw new Error('Invalid code');
+    if (!this.isCodeValid(guess)) throw new Error('Invalid code');
     const feedback = new Feedback({
       guess: guess.split(''),
       code: this.code,
@@ -42,5 +46,10 @@ export default class GameState {
 
   isOver() {
     return this.isCodeGuessed() || this.areTurnsOver();
+  }
+
+  getCode(): string|null {
+    if (this.isOver()) return this.code.join()
+    return null;
   }
 }
